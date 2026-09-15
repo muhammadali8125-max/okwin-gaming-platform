@@ -72,7 +72,11 @@ export default function VipPage() {
           <div className="relative z-10">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2 font-black text-lg">
-                <Crown className="w-6 h-6 fill-black" />
+                <img
+                  src="/images/icons3d/vip-crown.png"
+                  alt="VIP Crown"
+                  className="w-8 h-8 object-contain drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]"
+                />
                 <span>VIP TIER {user.vipLevel}</span>
               </div>
               <span className="bg-black text-yellow-400 font-mono text-[11px] font-black px-2.5 py-0.5 rounded-full uppercase shadow-sm border border-black/50">

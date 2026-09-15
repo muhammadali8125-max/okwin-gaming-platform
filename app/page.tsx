@@ -68,8 +68,8 @@ export default function HomePage() {
           {/* 2. Red Packet Promo Code */}
           <div className="bg-gradient-to-b from-[#3a0e12] to-[#20080a] border border-[#EA4E3D]/40 rounded-xl p-2 flex flex-col justify-between shadow-md relative overflow-hidden group">
             <div className="flex flex-col gap-1 relative z-10">
-              <div className="w-6 h-6 rounded-lg bg-[#EA4E3D]/20 text-[#FFAA09] flex items-center justify-center shrink-0 border border-[#FFAA09]/20">
-                <Gift className="w-3.5 h-3.5" />
+              <div className="w-7 h-7 rounded-lg bg-[#EA4E3D]/20 text-[#FFAA09] flex items-center justify-center shrink-0 border border-[#FFAA09]/20 overflow-hidden">
+                <img src="/images/icons3d/bonus-gift.png" alt="Red Packet" className="w-6 h-6 object-contain drop-shadow-[0_0_6px_rgba(234,78,61,0.6)] group-hover:scale-110 transition-transform" />
               </div>
               <div className="leading-tight">
                 <span className="text-[10px] font-black text-white block truncate tracking-wide">RED PKT</span>
@@ -92,8 +92,8 @@ export default function HomePage() {
           {/* 3. Lucky Fortune Wheel */}
           <div className="bg-gradient-to-b from-[#332208] to-[#1c1404] border border-[#FFAA09]/40 rounded-xl p-2 flex flex-col justify-between shadow-md relative overflow-hidden group">
             <div className="flex flex-col gap-1 relative z-10">
-              <div className="w-6 h-6 rounded-lg bg-[#FFAA09]/20 text-[#FFAA09] flex items-center justify-center shrink-0">
-                <Sparkles className="w-3.5 h-3.5" />
+              <div className="w-7 h-7 rounded-lg bg-[#FFAA09]/20 text-[#FFAA09] flex items-center justify-center shrink-0 overflow-hidden">
+                <img src="/images/icons3d/slots-777.png" alt="Wheel" className="w-6 h-6 object-contain drop-shadow-[0_0_6px_rgba(255,170,9,0.6)] group-hover:scale-110 transition-transform" />
               </div>
               <div className="leading-tight">
                 <span className="text-[10px] font-black text-white block truncate tracking-wide">WHEEL</span>
@@ -120,8 +120,8 @@ export default function HomePage() {
             className="bg-gradient-to-b from-[#332508] to-[#1a1405] border border-[#FFAA09]/40 hover:border-[#FFAA09] rounded-xl p-2 flex flex-col justify-between shadow-md group relative overflow-hidden transition-all"
           >
             <div className="flex flex-col gap-1 relative z-10">
-              <div className="w-6 h-6 rounded-lg bg-[#FFAA09]/20 text-[#FFAA09] flex items-center justify-center shrink-0">
-                <Hammer className="w-3.5 h-3.5" />
+              <div className="w-7 h-7 rounded-lg bg-[#FFAA09]/20 text-[#FFAA09] flex items-center justify-center shrink-0 overflow-hidden">
+                <img src="/images/icons3d/cashier-wallet.png" alt="Piggy" className="w-6 h-6 object-contain drop-shadow-[0_0_6px_rgba(255,170,9,0.6)] group-hover:scale-110 transition-transform" />
               </div>
               <div className="leading-tight">
                 <span className="text-[10px] font-black text-white block truncate tracking-wide">PIGGY</span>

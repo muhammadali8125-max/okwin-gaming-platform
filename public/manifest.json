@@ -1,0 +1,49 @@
+{
+  "name": "Okwin Pakistan - Electronic Slots, Aviator & Cricket",
+  "short_name": "Okwin",
+  "description": "Play Aviator, Mines, Crazy 777 Slots and Sportsbook with instant JazzCash and EasyPaisa withdrawals on Okwin.",
+  "start_url": "/",
+  "id": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#0a0a0a",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/images/plane.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/aviator.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["games", "entertainment", "sports"],
+  "shortcuts": [
+    {
+      "name": "Play Aviator",
+      "short_name": "Aviator",
+      "description": "Launch supersonic crash multiplier game",
+      "url": "/games/aviator",
+      "icons": [{ "src": "/images/plane.jpg", "sizes": "192x192" }]
+    },
+    {
+      "name": "Play Mines",
+      "short_name": "Mines",
+      "description": "Launch diamonds and mines arcade game",
+      "url": "/games/mines",
+      "icons": [{ "src": "/images/mines.jpg", "sizes": "192x192" }]
+    },
+    {
+      "name": "Wallet & Cashier",
+      "short_name": "Wallet",
+      "description": "Deposit & Withdraw via JazzCash & EasyPaisa",
+      "url": "/wallet",
+      "icons": [{ "src": "/images/plane.jpg", "sizes": "192x192" }]
+    }
+  ]
+}

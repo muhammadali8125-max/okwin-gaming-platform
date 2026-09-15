@@ -1,0 +1,214 @@
+
+/* ═══════ COMMERCIAL TYPOGRAPHY & FINTECH ENGINE ═══════ */
+@layer base {
+  html, body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    letter-spacing: -0.012em;
+  }
+
+  /* High precision tabular numerals for currency & odds */
+  .font-mono,
+  input[type="number"],
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.025em;
+  }
+}
+
+/* Commercial sleek modal shadow and backdrop */
+.casino-modal-shadow {
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.95), 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-main: #161616;
+  --bg-card: #212121;
+  --primary: #78E02C;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: #FFFFFF;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #161616;
+}
+::-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #78E02C;
+}
+
+/* Glassmorphism card */
+.glass-card {
+  background: rgba(33, 33, 33, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.jjwin-btn,
+.okwin-btn {
+  background: linear-gradient(180deg, #8ef43f 0%, #78e02c 100%);
+  color: #000000;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 15px rgba(120, 224, 44, 0.35);
+}
+.jjwin-btn:hover,
+.okwin-btn:hover {
+  background: linear-gradient(180deg, #9ff856 0%, #68c624 100%);
+  box-shadow: 0 6px 20px rgba(120, 224, 44, 0.5);
+  transform: translateY(-1px);
+}
+.jjwin-btn:active,
+.okwin-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 10px rgba(120, 224, 44, 0.25);
+}
+
+/* Shimmer animation for banners */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+.animate-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+.animate-shimmer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+  animation: shimmer 2.5s infinite;
+}
+
+/* No-scrollbar utility */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* ═══════ PIGGY BANK GAME STYLES ═══════ */
+
+/* Piggy body golden metallic gradient */
+.piggy-body {
+  background: linear-gradient(135deg, #f7d06b 0%, #d4a02a 25%, #f5c842 50%, #e8a918 75%, #c49000 100%);
+  box-shadow:
+    0 8px 32px rgba(196, 144, 0, 0.4),
+    0 2px 8px rgba(0, 0, 0, 0.5),
+    inset 0 2px 16px rgba(255, 230, 130, 0.3);
+}
+
+/* Piggy nose/snout */
+.piggy-nose {
+  background: radial-gradient(ellipse, #e8a918 0%, #c49000 100%);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3), inset 0 1px 3px rgba(255, 230, 130, 0.4);
+}
+
+/* Hammer visual glow per tier */
+.hammer-bronze { box-shadow: 0 0 12px rgba(205, 127, 50, 0.4), inset 0 1px 4px rgba(255, 200, 130, 0.3); }
+.hammer-silver { box-shadow: 0 0 12px rgba(203, 213, 225, 0.5), inset 0 1px 4px rgba(255, 255, 255, 0.3); }
+.hammer-gold { box-shadow: 0 0 16px rgba(245, 158, 11, 0.5), inset 0 1px 4px rgba(255, 230, 130, 0.4); }
+
+/* Crack line SVG overlay */
+.crack-lines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+.crack-line {
+  stroke: rgba(255, 50, 50, 0.7);
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: round;
+  stroke-dasharray: 80;
+  stroke-dashoffset: 80;
+}
+.crack-line.active {
+  animation: drawCrack 0.5s ease-out forwards;
+}
+
+@keyframes drawCrack {
+  to { stroke-dashoffset: 0; }
+}
+
+/* Coin shower particle */
+.coin-particle {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffd700, #f59e0b, #d97706);
+  box-shadow: 0 0 6px rgba(245, 158, 11, 0.6);
+  animation: coinFall 1s ease-out forwards;
+  z-index: 30;
+}
+
+@keyframes coinFall {
+  0% { opacity: 1; transform: translateY(-20px) rotate(0deg) scale(1); }
+  70% { opacity: 0.8; }
+  100% { opacity: 0; transform: translateY(100px) rotate(360deg) scale(0.3); }
+}
+
+/* Pedestal platform glow */
+.pedestal-glow {
+  background: radial-gradient(ellipse 80% 30% at center bottom, rgba(245, 158, 11, 0.25) 0%, transparent 70%);
+}
+
+/* Ambient floating particle */
+.ambient-particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(245, 158, 11, 0.5);
+  animation: ambientFloat 3s ease-in-out infinite;
+}
+
+@keyframes ambientFloat {
+  0%, 100% { opacity: 0.2; transform: translateY(0) scale(0.8); }
+  50% { opacity: 0.8; transform: translateY(-20px) scale(1.2); }
+}
+
+/* Payout table row hover */
+.payout-row:hover {
+  background: rgba(245, 158, 11, 0.08);
+}
+
+/* Game info panel toggle */
+.game-info-slide {
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  overflow: hidden;
+}
+
+/* Impact flash overlay */
+@keyframes impactFlash {
+  0% { opacity: 0.6; }
+  100% { opacity: 0; }
+}
+.impact-flash {
+  animation: impactFlash 0.2s ease-out forwards;
+}
+
